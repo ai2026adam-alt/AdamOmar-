@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <!-- Loading overlay -->
+  <div id="site-loader" class="site-loader" aria-hidden="true">
+    <div class="loader-circle" aria-hidden="true"></div>
+  </div>
+
   <div class="container card">
     <header class="header">
       <div class="brand">
@@ -33,17 +38,30 @@
         <h2 class="ar">تواصل معي</h2>
         <h2 class="en">Get in touch</h2>
 
-        <p class="ar">📧 البريد الإلكتروني: <a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
-        <p class="en">📧 Email: <a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
+        <div class="ar">
+          <p>📧 البريد الإلكتروني:</p>
+          <p style="margin-top: -8px; color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
 
-        <p class="ar">📱 الهاتف: 771199341 — 730044892</p>
-        <p class="en">📱 Phone: 771199341 — 730044892</p>
+          <p style="margin-top: 16px;">📱 الهاتف:</p>
+          <p style="margin-top: -8px; color: #ffd700;">771199341 — 730044892</p>
 
-        <p class="ar">🔗 فيسبوك: <a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">الصفحة</a></p>
-        <p class="en">🔗 Facebook: <a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">page</a></p>
+          <p style="margin-top: 16px;">🔗 فيسبوك:</p>
+          <p style="margin-top: -8px;"><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">زيارة الصفحة</a></p>
+        </div>
 
-        <div style="margin-top:14px">
-          <a class="btn primary" href="https://wa.me/967771199341" target="_blank">تواصل على واتساب / WhatsApp</a>
+        <div class="en" style="display: none;">
+          <p>📧 Email:</p>
+          <p style="margin-top: -8px; color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
+
+          <p style="margin-top: 16px;">📱 Phone:</p>
+          <p style="margin-top: -8px; color: #ffd700;">771199341 — 730044892</p>
+
+          <p style="margin-top: 16px;">🔗 Facebook:</p>
+          <p style="margin-top: -8px;"><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">Visit Page</a></p>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a class="btn primary" href="https://wa.me/967771199341" target="_blank"><span class="ar">تواصل على واتساب</span><span class="en">Contact on WhatsApp</span></a>
         </div>
       </section>
     </main>
@@ -58,6 +76,13 @@
 function setLang(l){
   document.documentElement.setAttribute('data-lang', l);
 }
+</script>
+</script>
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('site-loader');
+    if (loader) { setTimeout(()=> { loader.style.opacity='0'; loader.remove(); }, 400); }
+  });
 </script>
 </body>
 </html>
