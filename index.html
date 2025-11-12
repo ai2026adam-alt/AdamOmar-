@@ -1,44 +1,140 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" data-lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adam Omar - مهندس كهربائي</title>
-  <style>
-    body {
-      font-family: "Cairo", sans-serif;
-      background: linear-gradient(135deg, #1e1e2f, #2b2b3c);
-      color: white;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #00bcd4;
-      font-size: 40px;
-    }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 18px;
-      line-height: 1.8;
-    }
-    .card {
-      background: #222;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      display: inline-block;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>المهندس آدم بن عمر — الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Adam Omar</h1>
-    <h2>مهندس كهربائي</h2>
-    <p>
-      متخصص في تصميم وصيانة شاشات LED وإنشاء محتوى الإعلانات.
-      <br>ملفي الشخصي وسيرتي الذاتية والمشاريع التي أنجزتها في مجال الكهرباء والتقنيات الإعلانية.
-    </p>
+
+  <div class="container card" id="site">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">AO</div>
+        <div class="title">
+          <h1>المهندس آدم بن عمر</h1>
+          <p>مهندس كهرباء محترف • مهندس شاشات LED • مصمم إعلانات</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+        <a class="btn" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
+        <a class="btn" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+
+        <div class="lang" style="margin-left:12px">
+          <button id="lang-ar" class="active">AR</button>
+          <button id="lang-en">EN</button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="hero card">
+          <div class="left">
+            <h2 class="ar">المهندس آدم بن عمر</h2>
+            <h2 class="en">Adam Omar — Electrical Engineer</h2>
+
+            <p class="ar">مهندس كهرباء محترف متخصص في تنفيذ الأعمال الكهربائية للمباني والشركات والمنازل، وصيانة الشاشات العملاقة LED.</p>
+            <p class="en">Professional electrical engineer specialized in building electrical works, and installation & maintenance of large LED display screens.</p>
+
+            <div class="services">
+              <div class="service">
+                <h4 class="ar">أعمال كهربائية للمباني</h4>
+                <h4 class="en">Building Electrical Works</h4>
+                <p class="ar">تنفيذ التركيبات والتغذية الكهربائية للمنازل والشركات.</p>
+                <p class="en">Electrical installations and power distribution for homes and businesses.</p>
+              </div>
+
+              <div class="service">
+                <h4 class="ar">شاشات LED</h4>
+                <h4 class="en">LED Displays</h4>
+                <p class="ar">تركيب وصيانة الشاشات العملاقة وبرمجة المحتوى الإعلاني.</p>
+                <p class="en">Installation, maintenance and ad content scheduling for LED screens.</p>
+              </div>
+
+              <div class="service">
+                <h4 class="ar">تصميم محتوى إعلاني</h4>
+                <h4 class="en">Advertising Content Design</h4>
+                <p class="ar">تصميم فيديوهات إعلانية تناسب الشاشات الكبيرة.</p>
+                <p class="en">Ad video design optimized for large displays.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="width:260px;text-align:center">
+            <!-- استخدم الصورة التي أرسلتها: ضع اسم الملف داخل assets/images/ -->
+            <img src="assets/images/1.jpg" alt="Adam Omar" style="width:220px;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.5)">
+            <p style="margin-top:10px;color:var(--muted)">المهندس آدم بن عمر</p>
+          </div>
+        </section>
+
+        <section style="margin-top:14px" class="card">
+          <h3 class="ar">لماذا تختارني؟</h3>
+          <h3 class="en">Why choose me?</h3>
+          <p class="ar">خبرة عملية في التركيبات والصيانة، وتركيز على جودة التنفيذ وسرعة الاستجابة لمتطلبات العميل.</p>
+          <p class="en">Hands-on experience, focus on quality, and fast response to client needs.</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="aside contact-card card">
+          <h4 class="ar">تواصل سريع</h4>
+          <h4 class="en">Quick Contact</h4>
+          <p class="ar">📧 aadm28285@gmail.com</p>
+          <p class="en">📧 aadm28285@gmail.com</p>
+
+          <p class="ar">📱 771199341 — 730044892</p>
+          <p class="en">📱 771199341 — 730044892</p>
+
+          <div class="contact-actions">
+            <a class="action" href="contact.html"><span class="ar">تفاصيل التواصل</span><span class="en">Contact</span></a>
+            <a class="action" href="projects.html"><span class="ar">عرض الأعمال</span><span class="en">Projects</span></a>
+            <!-- WhatsApp (استخدم +967 لليمن) -->
+            <a class="action" href="https://wa.me/967771199341" target="_blank">WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="aside card" style="margin-top:12px">
+          <h4 class="ar">معاينة سريعة للأعمال</h4>
+          <h4 class="en">Gallery Preview</h4>
+          <div class="gallery" style="margin-top:10px">
+            <img src="assets/images/1.jpg" alt="">
+            <img src="assets/images/2.jpg" alt="">
+            <img src="assets/images/3.jpg" alt="">
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer card">
+      <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
+      <div class="en">© 2025 Adam Omar — All rights reserved.</div>
+    </div>
   </div>
+
+<script>
+  const root = document.documentElement;
+  // language buttons
+  document.getElementById('lang-ar').addEventListener('click', () => {
+    root.setAttribute('data-lang','ar');
+    document.getElementById('lang-ar').classList.add('active');
+    document.getElementById('lang-en').classList.remove('active');
+  });
+  document.getElementById('lang-en').addEventListener('click', () => {
+    root.setAttribute('data-lang','en');
+    document.getElementById('lang-en').classList.add('active');
+    document.getElementById('lang-ar').classList.remove('active');
+  });
+
+  // if user prefers english by browser setting (optional)
+  if(navigator.language && navigator.language.startsWith('en')){
+    // keep Arabic as default; don't auto-switch unless you want
+  }
+</script>
+
 </body>
 </html>
