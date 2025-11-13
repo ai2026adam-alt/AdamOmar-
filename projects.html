@@ -4,28 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الأعمال | Projects</title>
-  <script>
-    // Ensure default opening language is Arabic for new visitors
-    (function(){
-      try {
-        var saved = localStorage.getItem('lang');
-        if(!saved) {
-          document.documentElement.setAttribute('data-lang','ar');
-          localStorage.setItem('lang','ar');
-        } else {
-          document.documentElement.setAttribute('data-lang', saved);
-        }
-      } catch(e) { }
-    })();
-  </script>
-  <link rel="stylesheet" href="assets/style.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
+
+  <style>
+    /* ============================
+       تنسيق قسم المعرض
+    ============================ */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 60px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    .gallery .project {
+      background: #fff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .gallery h3 {
+      margin-top: 10px;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    [data-lang="en"] .ar { display: none; }
+    [data-lang="ar"] .en { display: none; }
+
+    /* ============================
+       Lightbox
+    ============================ */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lightbox .close:hover { color: #ccc; }
+
+    /* الأسهم */
+    .lightbox .prev,
+    .lightbox .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 15px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .lightbox .next { right: 20px; border-radius: 3px 0 0 3px; }
+    .lightbox .prev { left: 20px; border-radius: 0 3px 3px 0; }
+
+    .lightbox .prev:hover,
+    .lightbox .next:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .lightbox .prev,
+      .lightbox .next {
+        font-size: 24px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Loading overlay -->
+  <!-- شاشة التحميل -->
   <div id="site-loader" class="site-loader" aria-hidden="true">
     <div class="loader-circle"></div>
   </div>
@@ -57,33 +152,11 @@
       </nav>
     </header>
 
+    <!-- قسم المعرض -->
     <section class="gallery">
-      <div class="project">
-        <picture>
-          <source srcset="assets/images/1.webp" type="image/webp">
-          <img src="assets/images/1.jpg" alt="Project 1" loading="lazy">
-        </picture>
-        <h3 class="ar">مشروع لوحات كهربائية</h3>
-        <h3 class="en">Electrical Panel Project</h3>
-      </div>
-
-      <div class="project">
-        <picture>
-          <source srcset="assets/images/2.webp" type="image/webp">
-          <img src="assets/images/2.jpg" alt="Project 2" loading="lazy">
-        </picture>
-        <h3 class="ar">تركيب شاشة عملاقة LED</h3>
-        <h3 class="en">LED Display Installation</h3>
-      </div>
-
-      <div class="project">
-        <picture>
-          <source srcset="assets/images/3.webp" type="image/webp">
-          <img src="assets/images/3.jpg" alt="Project 3" loading="lazy">
-        </picture>
-        <h3 class="ar">تنفيذ تمديدات داخلية</h3>
-        <h3 class="en">Internal Wiring Execution</h3>
-      </div>
+      <div class="project"><img src="assets/images/1.jpg" alt="Project 1"><h3 class="ar">مشروع لوحات كهربائية</h3><h3 class="en">Electrical Panel Project</h3></div>
+      <div class="project"><img src="assets/images/2.jpg" alt="Project 2"><h3 class="ar">تركيب شاشة عملاقة LED</h3><h3 class="en">LED Display Installation</h3></div>
+      <div class="project"><img src="assets/images/3.jpg" alt="Project 3"><h3 class="ar">تنفيذ تمديدات داخلية</h3><h3 class="en">Internal Wiring Execution</h3></div>
     </section>
 
     <footer class="footer card">
@@ -92,10 +165,18 @@
     </footer>
   </div>
 
+  <!-- نافذة العرض (Lightbox) -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
 <script>
   const root = document.documentElement;
 
-  // Language toggle
+  // 🔹 تبديل اللغة
   document.getElementById('lang-ar').addEventListener('click', () => {
     root.setAttribute('data-lang', 'ar');
     document.getElementById('lang-ar').classList.add('active');
@@ -110,7 +191,6 @@
     localStorage.setItem('lang', 'en');
   });
 
-  // Restore language preference
   const savedLang = localStorage.getItem('lang') || 'ar';
   root.setAttribute('data-lang', savedLang);
   if (savedLang === 'en') {
@@ -118,7 +198,7 @@
     document.getElementById('lang-ar').classList.remove('active');
   }
 
-  // Hide loader after page load
+  // 🔹 إخفاء شاشة التحميل
   window.addEventListener('load', () => {
     const loader = document.getElementById('site-loader');
     if (loader) {
@@ -130,17 +210,63 @@
     }
   });
 
-  // Mobile menu toggle (safe: only runs if elements exist)
+  // 🔹 قائمة الجوال
   (function() {
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
     if (!menuToggle || !mainNav) return;
-
     menuToggle.addEventListener('click', () => {
       mainNav.classList.toggle('show');
     });
   })();
-</script>
 
+  // 🔹 Lightbox مع التنقل
+  const images = Array.from(document.querySelectorAll('.gallery img'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+  const prevBtn = document.querySelector('.lightbox .prev');
+  const nextBtn = document.querySelector('.lightbox .next');
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    lightbox.style.display = 'flex';
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentIndex].src;
+  }
+
+  images.forEach((img, i) => img.addEventListener('click', () => openLightbox(i)));
+  closeBtn.addEventListener('click', closeLightbox);
+  nextBtn.addEventListener('click', showNext);
+  prevBtn.addEventListener('click', showPrev);
+
+  // إغلاق عند الضغط خارج الصورة
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // التنقل بلوحة المفاتيح
+  document.addEventListener('keydown', e => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'Escape') closeLightbox();
+    }
+  });
+</script>
 </body>
 </html>
