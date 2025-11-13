@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>مشاريع المهندس آدم بن عمر | Adam Omar Projects</title>
+  <title>الأعمال | Projects</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Loading overlay -->
   <div id="site-loader" class="site-loader" aria-hidden="true">
-    <div class="loader-circle" aria-hidden="true"></div>
+    <div class="loader-circle"></div>
   </div>
 
   <div class="container card" id="site">
@@ -17,8 +18,8 @@
       <div class="brand">
         <div class="logo">AO</div>
         <div class="title">
-          <h1 class="ar">مشاريع المهندس آدم بن عمر</h1>
-          <h1 class="en">Adam Omar — Projects</h1>
+          <h1 class="ar">الأعمال</h1>
+          <h1 class="en">Projects</h1>
           <p class="ar">نماذج من الأعمال الكهربائية المنفذة باحترافية عالية</p>
           <p class="en">Professional electrical works & LED display projects</p>
         </div>
@@ -26,63 +27,81 @@
 
       <nav class="nav">
         <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
-        <a class="btn primary" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
+        <a class="btn" href="index.html#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+        <a class="btn btn-primary" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
         <a class="btn" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
 
-        <div class="lang" style="margin-left:12px">
+        <div class="lang">
           <button id="lang-ar" class="active">AR</button>
           <button id="lang-en">EN</button>
         </div>
       </nav>
-        </script>
-        <script>
-          // Remove loader on load
-          window.addEventListener('load', () => {
-            const loader = document.getElementById('site-loader');
-            if (loader) { setTimeout(()=> { loader.style.opacity='0'; loader.remove(); }, 400); }
-          });
-        </script>
     </header>
 
-  <section class="gallery">
-    <div class="project">
-      <img src="assets/images/1.jpg" alt="مشروع 1">
-      <h3 class="ar">مشروع لوحات كهربائية</h3>
-      <h3 class="en">Electrical Panel Project</h3>
-    </div>
+    <section class="gallery">
+      <div class="project">
+        <img src="assets/images/1.jpg" alt="Project 1">
+        <h3 class="ar">مشروع لوحات كهربائية</h3>
+        <h3 class="en">Electrical Panel Project</h3>
+      </div>
 
-    <div class="project">
-      <img src="assets/images/2.jpg" alt="مشروع 2">
-      <h3 class="ar">تركيب شاشة عملاقة LED</h3>
-      <h3 class="en">LED Display Installation</h3>
-    </div>
+      <div class="project">
+        <img src="assets/images/2.jpg" alt="Project 2">
+        <h3 class="ar">تركيب شاشة عملاقة LED</h3>
+        <h3 class="en">LED Display Installation</h3>
+      </div>
 
-    <div class="project">
-      <img src="assets/images/3.jpg" alt="مشروع 3">
-      <h3 class="ar">تنفيذ تمديدات داخلية</h3>
-      <h3 class="en">Internal Wiring Execution</h3>
-    </div>
-  </section>
+      <div class="project">
+        <img src="assets/images/3.jpg" alt="Project 3">
+        <h3 class="ar">تنفيذ تمديدات داخلية</h3>
+        <h3 class="en">Internal Wiring Execution</h3>
+      </div>
+    </section>
 
-    <div class="footer card">
+    <footer class="footer card">
       <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
       <div class="en">© 2025 Adam Omar — All rights reserved.</div>
-    </div>
+    </footer>
   </div>
 
 <script>
   const root = document.documentElement;
-  // language buttons
+
+  // Language toggle
   document.getElementById('lang-ar').addEventListener('click', () => {
-    root.setAttribute('data-lang','ar');
+    root.setAttribute('data-lang', 'ar');
     document.getElementById('lang-ar').classList.add('active');
     document.getElementById('lang-en').classList.remove('active');
+    localStorage.setItem('lang', 'ar');
   });
+
   document.getElementById('lang-en').addEventListener('click', () => {
-    root.setAttribute('data-lang','en');
+    root.setAttribute('data-lang', 'en');
     document.getElementById('lang-en').classList.add('active');
     document.getElementById('lang-ar').classList.remove('active');
+    localStorage.setItem('lang', 'en');
+  });
+
+  // Restore language preference
+  const savedLang = localStorage.getItem('lang') || 'ar';
+  root.setAttribute('data-lang', savedLang);
+  if (savedLang === 'en') {
+    document.getElementById('lang-en').classList.add('active');
+    document.getElementById('lang-ar').classList.remove('active');
+  }
+
+  // Hide loader after page load
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('site-loader');
+    if (loader) {
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 300ms ease';
+        setTimeout(() => loader.remove(), 350);
+      }, 500);
+    }
   });
 </script>
+
 </body>
 </html>

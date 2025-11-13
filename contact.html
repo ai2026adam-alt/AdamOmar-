@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>تواصل — المهندس آدم بن عمر</title>
+  <title>تواصل | Contact</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Loading overlay -->
   <div id="site-loader" class="site-loader" aria-hidden="true">
-    <div class="loader-circle" aria-hidden="true"></div>
+    <div class="loader-circle"></div>
   </div>
 
   <div class="container card">
@@ -17,18 +18,21 @@
       <div class="brand">
         <div class="logo">AO</div>
         <div class="title">
-          <h1>المهندس آدم بن عمر</h1>
-          <p>تواصل معنا / Contact</p>
+          <h1 class="ar">تواصل</h1>
+          <h1 class="en">Contact</h1>
+          <p class="ar">نتواصل معك بسرعة وكفاءة</p>
+          <p class="en">We respond quickly and professionally</p>
         </div>
       </div>
 
       <nav class="nav">
         <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+        <a class="btn" href="index.html#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
         <a class="btn" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
-        <a class="btn primary" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
-        <div class="lang" style="margin-left:12px">
-          <button onclick="setLang('ar')" class="active">AR</button>
-          <button onclick="setLang('en')">EN</button>
+        <a class="btn btn-primary" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+        <div class="lang">
+          <button id="lang-ar" class="active">AR</button>
+          <button id="lang-en">EN</button>
         </div>
       </nav>
     </header>
@@ -36,53 +40,82 @@
     <main>
       <section class="card">
         <h2 class="ar">تواصل معي</h2>
-        <h2 class="en">Get in touch</h2>
+        <h2 class="en">Get in Touch</h2>
 
+        <!-- Arabic content -->
         <div class="ar">
-          <p>📧 البريد الإلكتروني:</p>
-          <p style="margin-top: -8px; color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
+          <p><strong>📧 البريد الإلكتروني:</strong></p>
+          <p style="color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
 
-          <p style="margin-top: 16px;">📱 الهاتف:</p>
-          <p style="margin-top: -8px; color: #ffd700;">771199341 — 730044892</p>
+          <p style="margin-top: 16px;"><strong>📱 الهاتف:</strong></p>
+          <p style="color: #ffd700;"><a href="tel:+967771199341">771199341</a> — <a href="tel:+967730044892">730044892</a></p>
 
-          <p style="margin-top: 16px;">🔗 فيسبوك:</p>
-          <p style="margin-top: -8px;"><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">زيارة الصفحة</a></p>
+          <p style="margin-top: 16px;"><strong>🔗 فيسبوك:</strong></p>
+          <p><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank" style="color: #ffd700;">زيارة الصفحة</a></p>
         </div>
 
+        <!-- English content -->
         <div class="en" style="display: none;">
-          <p>📧 Email:</p>
-          <p style="margin-top: -8px; color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
+          <p><strong>📧 Email:</strong></p>
+          <p style="color: #ffd700;"><a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
 
-          <p style="margin-top: 16px;">📱 Phone:</p>
-          <p style="margin-top: -8px; color: #ffd700;">771199341 — 730044892</p>
+          <p style="margin-top: 16px;"><strong>📱 Phone:</strong></p>
+          <p style="color: #ffd700;"><a href="tel:+967771199341">771199341</a> — <a href="tel:+967730044892">730044892</a></p>
 
-          <p style="margin-top: 16px;">🔗 Facebook:</p>
-          <p style="margin-top: -8px;"><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank">Visit Page</a></p>
+          <p style="margin-top: 16px;"><strong>🔗 Facebook:</strong></p>
+          <p><a href="https://www.facebook.com/share/1BRc89RySc/" target="_blank" style="color: #ffd700;">Visit Page</a></p>
         </div>
 
         <div style="margin-top: 24px;">
-          <a class="btn primary" href="https://wa.me/967771199341" target="_blank"><span class="ar">تواصل على واتساب</span><span class="en">Contact on WhatsApp</span></a>
+          <a class="btn btn-primary" href="https://wa.me/967771199341?text=مرحبًا%2C%20أود%20التواصل%20مع%20المهندس%20آدم%20بن%20عمر." target="_blank"><span class="ar">تواصل على واتساب</span><span class="en">Contact on WhatsApp</span></a>
         </div>
       </section>
     </main>
 
-    <div class="footer card">
-      <div class="ar">© 2025 المهندس آدم بن عمر</div>
-      <div class="en">© 2025 Adam Omar</div>
-    </div>
+    <footer class="footer card">
+      <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
+      <div class="en">© 2025 Adam Omar — All rights reserved.</div>
+    </footer>
   </div>
 
 <script>
-function setLang(l){
-  document.documentElement.setAttribute('data-lang', l);
-}
-</script>
-</script>
-<script>
+  const root = document.documentElement;
+
+  // Language toggle
+  document.getElementById('lang-ar').addEventListener('click', () => {
+    root.setAttribute('data-lang', 'ar');
+    document.getElementById('lang-ar').classList.add('active');
+    document.getElementById('lang-en').classList.remove('active');
+    localStorage.setItem('lang', 'ar');
+  });
+
+  document.getElementById('lang-en').addEventListener('click', () => {
+    root.setAttribute('data-lang', 'en');
+    document.getElementById('lang-en').classList.add('active');
+    document.getElementById('lang-ar').classList.remove('active');
+    localStorage.setItem('lang', 'en');
+  });
+
+  // Restore language preference
+  const savedLang = localStorage.getItem('lang') || 'ar';
+  root.setAttribute('data-lang', savedLang);
+  if (savedLang === 'en') {
+    document.getElementById('lang-en').classList.add('active');
+    document.getElementById('lang-ar').classList.remove('active');
+  }
+
+  // Hide loader after page load
   window.addEventListener('load', () => {
     const loader = document.getElementById('site-loader');
-    if (loader) { setTimeout(()=> { loader.style.opacity='0'; loader.remove(); }, 400); }
+    if (loader) {
+      setTimeout(() => {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 300ms ease';
+        setTimeout(() => loader.remove(), 350);
+      }, 500);
+    }
   });
 </script>
+
 </body>
 </html>
