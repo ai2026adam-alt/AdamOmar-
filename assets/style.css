@@ -790,3 +790,43 @@ html[data-lang="en"] .hero p.en {
 .aside.card {
   padding: 20px;
 }
+
+/* ===================== */
+/* زر القائمة للجوال (Menu Toggle) */
+/* ===================== */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #ffd70040;
+  color: #ffd700;
+  font-size: 1.6em;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background: #ffd70020;
+  border-color: #ffd700;
+  color: #ffed4e;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+}

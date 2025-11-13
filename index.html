@@ -26,7 +26,9 @@
         </div>
       </div>
 
-      <nav class="nav">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="nav" id="mainNav">
         <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
         <a class="btn" href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
         <a class="btn" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
@@ -206,6 +208,17 @@
       setTimeout(() => { loader.style.transition = 'opacity 300ms ease'; loader.style.opacity = '0'; loader.setAttribute('aria-hidden','true'); setTimeout(()=> loader.remove(),350); }, 500);
     }
   });
+
+  // Mobile menu toggle (safe: only runs if elements exist)
+  (function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (!menuToggle || !mainNav) return;
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('show');
+    });
+  })();
 </script>
 
 </body>
