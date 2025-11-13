@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الأعمال | Projects</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
 </head>
 <body>
   <!-- Loading overlay -->
@@ -42,19 +45,28 @@
 
     <section class="gallery">
       <div class="project">
-        <img src="assets/images/1.jpg" alt="Project 1">
+        <picture>
+          <source srcset="assets/images/1.webp" type="image/webp">
+          <img src="assets/images/1.jpg" alt="Project 1" loading="lazy">
+        </picture>
         <h3 class="ar">مشروع لوحات كهربائية</h3>
         <h3 class="en">Electrical Panel Project</h3>
       </div>
 
       <div class="project">
-        <img src="assets/images/2.jpg" alt="Project 2">
+        <picture>
+          <source srcset="assets/images/2.webp" type="image/webp">
+          <img src="assets/images/2.jpg" alt="Project 2" loading="lazy">
+        </picture>
         <h3 class="ar">تركيب شاشة عملاقة LED</h3>
         <h3 class="en">LED Display Installation</h3>
       </div>
 
       <div class="project">
-        <img src="assets/images/3.jpg" alt="Project 3">
+        <picture>
+          <source srcset="assets/images/3.webp" type="image/webp">
+          <img src="assets/images/3.jpg" alt="Project 3" loading="lazy">
+        </picture>
         <h3 class="ar">تنفيذ تمديدات داخلية</h3>
         <h3 class="en">Internal Wiring Execution</h3>
       </div>

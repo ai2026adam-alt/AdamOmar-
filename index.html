@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>المهندس آدم بن عمر</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
 </head>
 <body>
 
@@ -58,7 +61,10 @@
         </div>
         
         <div class="hero-image">
-          <img src="assets/images/1.jpg" alt="Adam Omar" class="profile-img">
+          <picture>
+            <source srcset="assets/images/1.webp" type="image/webp">
+            <img src="assets/images/1.jpg" alt="Adam Omar" class="profile-img" loading="lazy">
+          </picture>
         </div>
       </div>
     </section>
@@ -66,7 +72,10 @@
     <!-- About Section -->
     <section class="about-section" id="about">
       <div class="about-avatar">
-        <img src="assets/images/2.jpg" alt="صورة المهن"/>
+        <picture>
+          <source srcset="assets/images/2.webp" type="image/webp">
+          <img src="assets/images/2.jpg" alt="صورة المهن" loading="lazy"/>
+        </picture>
       </div>
       <div class="about-text">
         <h3 class="ar">نبذة عني</h3>
@@ -115,9 +124,18 @@
       <p class="ar">بعض الشركات والعملاء الذين تعاملت معهم وشهادات مختصرة.</p>
       <p class="en">Selected clients and experience highlights.</p>
       <div class="clients-grid">
-        <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5">
-        <img class="client-logo" src="assets/images/1.jpg" alt="Client example">
-        <img class="client-logo" src="assets/images/2.jpg" alt="Client example 2">
+        <picture>
+          <source srcset="assets/projec5.webp" type="image/webp">
+          <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/images/1.webp" type="image/webp">
+          <img class="client-logo" src="assets/images/1.jpg" alt="Client example" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/images/2.webp" type="image/webp">
+          <img class="client-logo" src="assets/images/2.jpg" alt="Client example 2" loading="lazy">
+        </picture>
       </div>
     </section>
 
@@ -219,6 +237,11 @@
       mainNav.classList.toggle('show');
     });
   })();
+</script>
+
+<script>
+// Ensure any remaining images use native lazy-loading (fallback)
+document.querySelectorAll('img').forEach(img => { if(!img.hasAttribute('loading')) img.loading = 'lazy'; });
 </script>
 
 </body>
