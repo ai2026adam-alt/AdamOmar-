@@ -4,25 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>تواصل | Contact</title>
-  <script>
-    // Ensure default opening language is Arabic for new visitors
-    (function(){
-      try {
-        var saved = localStorage.getItem('lang');
-        if(!saved) {
-          document.documentElement.setAttribute('data-lang','ar');
-          localStorage.setItem('lang','ar');
-        } else {
-          document.documentElement.setAttribute('data-lang', saved);
-        }
-      } catch(e) { }
-    })();
-  </script>
-  <link rel="stylesheet" href="assets/style.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
 </head>
 <body>
   <!-- Loading overlay -->
@@ -145,11 +128,6 @@
       mainNav.classList.toggle('show');
     });
   })();
-</script>
-
-<script>
-// Ensure any remaining images use native lazy-loading (fallback)
-document.querySelectorAll('img').forEach(img => { if(!img.hasAttribute('loading')) img.loading = 'lazy'; });
 </script>
 
 </body>

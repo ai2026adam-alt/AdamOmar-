@@ -1,139 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" data-lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الأعمال | Projects</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>المهندس آدم بن عمر</title>
   <link rel="stylesheet" href="assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* ============================
-       تنسيق قسم المعرض
-    ============================ */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 60px 20px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-
-    .gallery .project {
-      background: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery .project:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .gallery h3 {
-      margin-top: 10px;
-      color: #333;
-      font-size: 1.1rem;
-    }
-
-    [data-lang="en"] .ar { display: none; }
-    [data-lang="ar"] .en { display: none; }
-
-    /* ============================
-       Lightbox
-    ============================ */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.85);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox-content {
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(255,255,255,0.3);
-    }
-
-    .lightbox .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .lightbox .close:hover { color: #ccc; }
-
-    /* الأسهم */
-    .lightbox .prev,
-    .lightbox .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 15px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 30px;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-      background-color: rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
-    }
-
-    .lightbox .next { right: 20px; border-radius: 3px 0 0 3px; }
-    .lightbox .prev { left: 20px; border-radius: 0 3px 3px 0; }
-
-    .lightbox .prev:hover,
-    .lightbox .next:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    @media (max-width: 600px) {
-      .lightbox .prev,
-      .lightbox .next {
-        font-size: 24px;
-        padding: 10px;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- شاشة التحميل -->
+
+  <!-- Loading overlay -->
   <div id="site-loader" class="site-loader" aria-hidden="true">
     <div class="loader-circle"></div>
   </div>
 
-  <div class="container card" id="site">
+  <div class="container" id="site">
     <header class="header">
       <div class="brand">
         <div class="logo">AO</div>
         <div class="title">
-          <h1 class="ar">الأعمال</h1>
-          <h1 class="en">Projects</h1>
-          <p class="ar">نماذج من الأعمال الكهربائية المنفذة باحترافية عالية</p>
-          <p class="en">Professional electrical works & LED display projects</p>
+          <h1 class="ar">المهندس آدم بن عمر</h1>
+          <h1 class="en">Adam Omar</h1>
+          <p class="ar">مهندس كهرباء محترف • مهندس شاشات LED • مصمم إعلانات</p>
+          <p class="en">Electrical Engineer • LED Specialist • Ad Designer</p>
         </div>
       </div>
 
@@ -141,8 +30,8 @@
 
       <nav class="nav" id="mainNav">
         <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
-        <a class="btn" href="index.html#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
-        <a class="btn btn-primary" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
+        <a class="btn" href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
+        <a class="btn" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
         <a class="btn" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
 
         <div class="lang">
@@ -152,12 +41,186 @@
       </nav>
     </header>
 
-    <!-- قسم المعرض -->
-    <section class="gallery">
-      <div class="project"><img src="assets/images/1.jpg" alt="Project 1"><h3 class="ar">مشروع لوحات كهربائية</h3><h3 class="en">Electrical Panel Project</h3></div>
-      <div class="project"><img src="assets/images/2.jpg" alt="Project 2"><h3 class="ar">تركيب شاشة عملاقة LED</h3><h3 class="en">LED Display Installation</h3></div>
-      <div class="project"><img src="assets/images/3.jpg" alt="Project 3"><h3 class="ar">تنفيذ تمديدات داخلية</h3><h3 class="en">Internal Wiring Execution</h3></div>
+    <!-- Hero Section -->
+    <section class="hero-section card">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2 class="ar">خدمات احترافية في مجال الهندسة الكهربائية</h2>
+          <h2 class="en">Professional Electrical Engineering Services</h2>
+          
+          <p class="ar">تخصصي يشمل تنفيذ الأعمال الكهربائية للمباني والشركات والمنازل، وصيانة الشاشات العملاقة LED، وتصميم محتوى إعلاني احترافي.</p>
+          <p class="en">My expertise includes electrical installations for buildings, businesses & homes, LED display maintenance, and professional advertising content design.</p>
+          
+          <div class="hero-buttons">
+            <a href="projects.html" class="btn btn-primary"><span class="ar">عرض الأعمال</span><span class="en">View Projects</span></a>
+            <a href="contact.html" class="btn btn-secondary"><span class="ar">تواصل معي</span><span class="en">Contact Me</span></a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <img src="assets/images/1.jpg" alt="Adam Omar" class="profile-img">
+        </div>
+      </div>
     </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="about-avatar">
+        <img src="assets/images/2.jpg" alt="صورة المهن"/>
+      </div>
+      <div class="about-text">
+        <h3 class="ar">نبذة عني</h3>
+        <h3 class="en">About Me</h3>
+        <p class="ar">أنا المهندس آدم بن عمر، أقدم خدمات هندسية متكاملة في الكهرباء وتركيب وصيانة شاشات LED، مع خبرة في تصميم المحتوى الإعلاني للشاشات الكبيرة. أعمل بدقة ومهنية لضمان أفضل تجربة للعملاء.</p>
+        <p class="en">I am Adam Omar — an electrical engineer specializing in installations, LED display maintenance, and advertising content design for large screens. I deliver reliable, high-quality solutions tailored to each client's needs.</p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <h2 class="section-title ar">الخدمات الرئيسية</h2>
+      <h2 class="section-title en">Main Services</h2>
+      
+      <div class="services-grid">
+        <div class="service-card card">
+          <div class="service-icon">🔌</div>
+          <h3 class="ar">التركيبات الكهربائية</h3>
+          <h3 class="en">Electrical Installations</h3>
+          <p class="ar">تنفيذ التركيبات والتغذية الكهربائية للمنازل والشركات بأعلى معايير الجودة.</p>
+          <p class="en">Professional installations and power distribution for homes and businesses.</p>
+        </div>
+
+        <div class="service-card card">
+          <div class="service-icon">💡</div>
+          <h3 class="ar">شاشات LED العملاقة</h3>
+          <h3 class="en">LED Display Screens</h3>
+          <p class="ar">تركيب وصيانة الشاشات العملاقة وبرمجة وإدارة المحتوى الإعلاني.</p>
+          <p class="en">Installation, maintenance and content management for LED screens.</p>
+        </div>
+
+        <div class="service-card card">
+          <div class="service-icon">🎬</div>
+          <h3 class="ar">تصميم المحتوى الإعلاني</h3>
+          <h3 class="en">Advertising Content Design</h3>
+          <p class="ar">تصميم فيديوهات وصور إعلانية احترافية تناسب الشاشات الكبيرة.</p>
+          <p class="en">Professional ad videos and graphics optimized for large displays.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+<section class="portfolio-section" id="portfolio">
+  <h2 class="ar">أعمالي</h2>
+  <h2 class="en">My Projects</h2>
+
+  <div class="portfolio-gallery">
+    <img src="assets/1.JPG" alt="">
+    <img src="assets/2.jpg" alt="">
+    <img src="assets/3.JPG" alt="">
+    <img src="assets/5.JPG" alt="">
+    <img src="assets/7.JPG" alt="">
+    <img src="assets/8.JPG" alt="">
+    <img src="assets/9.JPG" alt="">
+    <img src="assets/10.JPG" alt="">
+    <img src="assets/11.jpg" alt="">
+    <img src="assets/12.jpg" alt="">
+    <img src="assets/13.jpg" alt="">
+    <img src="assets/projec5.webp" alt="">
+    <img src="assets/project10.jpg" alt="">
+  </div>
+</section>
+
+<style>
+.portfolio-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  margin-bottom: 20px;
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.portfolio-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-gallery img:hover {
+  transform: scale(1.04);
+}
+</style>
+
+<!-- Experience / Clients -->
+    <section class="experience-section" id="experience">
+      <h2 class="ar">الخبرات والعملاء</h2>
+      <h2 class="en">Experience & Clients</h2>
+      <p class="ar">بعض الشركات والعملاء الذين تعاملت معهم وشهادات مختصرة.</p>
+      <p class="en">Selected clients and experience highlights.</p>
+      <div class="clients-grid">
+        <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5">
+        <img class="client-logo" src="assets/images/1.jpg" alt="Client example">
+        <img class="client-logo" src="assets/images/2.jpg" alt="Client example 2">
+      </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-section card">
+      <h2 class="ar">لماذا تختارني؟</h2>
+      <h2 class="en">Why Choose Me?</h2>
+      
+      <div class="why-content">
+        <div class="why-item">
+          <span class="why-icon">⭐</span>
+          <h4 class="ar">خبرة عملية طويلة</h4>
+          <h4 class="en">Extensive Experience</h4>
+          <p class="ar">سنوات من الخبرة العملية في المشاريع الكهربائية المختلفة</p>
+          <p class="en">Years of hands-on experience in various electrical projects</p>
+        </div>
+
+        <div class="why-item">
+          <span class="why-icon">✅</span>
+          <h4 class="ar">جودة عالية</h4>
+          <h4 class="en">High Quality</h4>
+          <p class="ar">التركيز على تقديم أفضل جودة في كل مشروع</p>
+          <p class="en">Commitment to delivering the highest quality in every project</p>
+        </div>
+
+        <div class="why-item">
+          <span class="why-icon">⚡</span>
+          <h4 class="ar">سرعة الاستجابة</h4>
+          <h4 class="en">Fast Response</h4>
+          <p class="ar">استجابة سريعة وفعّالة لمتطلبات العملاء</p>
+          <p class="en">Quick and effective response to client needs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Contact Aside -->
+    <aside class="quick-contact card">
+      <h3 class="ar">تواصل سريع</h3>
+      <h3 class="en">Quick Contact</h3>
+      <div class="contact-info">
+        <p><strong>📧</strong> <a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
+        <p><strong>📱</strong> <a href="tel:+967771199341">771199341</a></p>
+        <p><strong>📱</strong> <a href="tel:+967730044892">730044892</a></p>
+      </div>
+      <div class="quick-actions">
+        <a href="contact.html" class="btn btn-full"><span class="ar">تفاصيل التواصل</span><span class="en">Contact Details</span></a>
+        <a href="https://wa.me/967771199341" target="_blank" class="btn btn-full whatsapp"><span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
+        <a href="projects.html" class="btn btn-full"><span class="ar">عرض الأعمال</span><span class="en">View Projects</span></a>
+      </div>
+    </aside>
 
     <footer class="footer card">
       <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
@@ -165,108 +228,19 @@
     </footer>
   </div>
 
-  <!-- نافذة العرض (Lightbox) -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
-  </div>
-
 <script>
   const root = document.documentElement;
 
-  // 🔹 تبديل اللغة
+  // language buttons
   document.getElementById('lang-ar').addEventListener('click', () => {
-    root.setAttribute('data-lang', 'ar');
+    root.setAttribute('data-lang','ar');
     document.getElementById('lang-ar').classList.add('active');
     document.getElementById('lang-en').classList.remove('active');
     localStorage.setItem('lang', 'ar');
   });
-
+  
   document.getElementById('lang-en').addEventListener('click', () => {
-    root.setAttribute('data-lang', 'en');
+    root.setAttribute('data-lang','en');
     document.getElementById('lang-en').classList.add('active');
     document.getElementById('lang-ar').classList.remove('active');
-    localStorage.setItem('lang', 'en');
-  });
-
-  const savedLang = localStorage.getItem('lang') || 'ar';
-  root.setAttribute('data-lang', savedLang);
-  if (savedLang === 'en') {
-    document.getElementById('lang-en').classList.add('active');
-    document.getElementById('lang-ar').classList.remove('active');
-  }
-
-  // 🔹 إخفاء شاشة التحميل
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('site-loader');
-    if (loader) {
-      setTimeout(() => {
-        loader.style.opacity = '0';
-        loader.style.transition = 'opacity 300ms ease';
-        setTimeout(() => loader.remove(), 350);
-      }, 500);
-    }
-  });
-
-  // 🔹 قائمة الجوال
-  (function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    if (!menuToggle || !mainNav) return;
-    menuToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('show');
-    });
-  })();
-
-  // 🔹 Lightbox مع التنقل
-  const images = Array.from(document.querySelectorAll('.gallery img'));
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeBtn = document.querySelector('.lightbox .close');
-  const prevBtn = document.querySelector('.lightbox .prev');
-  const nextBtn = document.querySelector('.lightbox .next');
-  let currentIndex = 0;
-
-  function openLightbox(index) {
-    currentIndex = index;
-    lightbox.style.display = 'flex';
-    lightboxImg.src = images[currentIndex].src;
-  }
-
-  function closeLightbox() {
-    lightbox.style.display = 'none';
-  }
-
-  function showNext() {
-    currentIndex = (currentIndex + 1) % images.length;
-    lightboxImg.src = images[currentIndex].src;
-  }
-
-  function showPrev() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    lightboxImg.src = images[currentIndex].src;
-  }
-
-  images.forEach((img, i) => img.addEventListener('click', () => openLightbox(i)));
-  closeBtn.addEventListener('click', closeLightbox);
-  nextBtn.addEventListener('click', showNext);
-  prevBtn.addEventListener('click', showPrev);
-
-  // إغلاق عند الضغط خارج الصورة
-  lightbox.addEventListener('click', e => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  // التنقل بلوحة المفاتيح
-  document.addEventListener('keydown', e => {
-    if (lightbox.style.display === 'flex') {
-      if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft') showPrev();
-      if (e.key === 'Escape') closeLightbox();
-    }
-  });
-</script>
-</body>
-</html>
+    local
