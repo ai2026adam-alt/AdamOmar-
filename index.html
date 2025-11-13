@@ -4,25 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>المهندس آدم بن عمر</title>
-  <script>
-    // Ensure default opening language is Arabic for new visitors
-    (function(){
-      try {
-        var saved = localStorage.getItem('lang');
-        if(!saved) {
-          document.documentElement.setAttribute('data-lang','ar');
-          localStorage.setItem('lang','ar');
-        } else {
-          document.documentElement.setAttribute('data-lang', saved);
-        }
-      } catch(e) { /* ignore if localStorage unavailable */ }
-    })();
-  </script>
-  <link rel="stylesheet" href="assets/style.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <meta http-equiv="Cache-Control" content="public, max-age=31536000">
 </head>
 <body>
 
@@ -38,8 +21,8 @@
         <div class="title">
           <h1 class="ar">المهندس آدم بن عمر</h1>
           <h1 class="en">Adam Omar</h1>
-          <p class="ar">مهندس كهرباء محترف • مهندس شاشات LED</p>
-          <p class="en">Electrical Engineer • LED Specialist</p>
+          <p class="ar">مهندس كهرباء محترف • مهندس شاشات LED • مصمم إعلانات</p>
+          <p class="en">Electrical Engineer • LED Specialist • Ad Designer</p>
         </div>
       </div>
 
@@ -75,10 +58,7 @@
         </div>
         
         <div class="hero-image">
-          <picture>
-            <source srcset="assets/images/1.webp" type="image/webp">
-            <img src="assets/images/1.jpg" alt="Adam Omar" class="profile-img" loading="lazy">
-          </picture>
+          <img src="assets/images/1.jpg" alt="Adam Omar" class="profile-img">
         </div>
       </div>
     </section>
@@ -86,10 +66,7 @@
     <!-- About Section -->
     <section class="about-section" id="about">
       <div class="about-avatar">
-        <picture>
-          <source srcset="assets/images/2.webp" type="image/webp">
-          <img src="assets/images/2.jpg" alt="صورة المهن" loading="lazy"/>
-        </picture>
+        <img src="assets/images/2.jpg" alt="صورة المهن"/>
       </div>
       <div class="about-text">
         <h3 class="ar">نبذة عني</h3>
@@ -138,18 +115,9 @@
       <p class="ar">بعض الشركات والعملاء الذين تعاملت معهم وشهادات مختصرة.</p>
       <p class="en">Selected clients and experience highlights.</p>
       <div class="clients-grid">
-        <picture>
-          <source srcset="assets/projec5.webp" type="image/webp">
-          <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5" loading="lazy">
-        </picture>
-        <picture>
-          <source srcset="assets/images/1.webp" type="image/webp">
-          <img class="client-logo" src="assets/images/1.jpg" alt="Client example" loading="lazy">
-        </picture>
-        <picture>
-          <source srcset="assets/images/2.webp" type="image/webp">
-          <img class="client-logo" src="assets/images/2.jpg" alt="Client example 2" loading="lazy">
-        </picture>
+        <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5">
+        <img class="client-logo" src="assets/images/1.jpg" alt="Client example">
+        <img class="client-logo" src="assets/images/2.jpg" alt="Client example 2">
       </div>
     </section>
 
@@ -251,11 +219,6 @@
       mainNav.classList.toggle('show');
     });
   })();
-</script>
-
-<script>
-// Ensure any remaining images use native lazy-loading (fallback)
-document.querySelectorAll('img').forEach(img => { if(!img.hasAttribute('loading')) img.loading = 'lazy'; });
 </script>
 
 </body>
