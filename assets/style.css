@@ -479,6 +479,54 @@ main a:hover {
   }
 }
 
+/* Mobile: improve stacking and touch targets */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .nav .btn {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 0.98em;
+  }
+
+  .lang {
+    align-self: flex-end;
+    margin-top: 6px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero-image img, .about-avatar img, .client-logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    margin: 12px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .clients-grid { justify-content: center; gap: 12px; }
+
+  .quick-contact .contact-info p { font-size: 0.98em; }
+}
+
 /* Contact Section */
 .contact-card h4 {
   font-size: 1.1em;
