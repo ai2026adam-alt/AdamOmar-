@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html lang="ar" data-lang="ar">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>المهندس آدم بن عمر</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المهندس آدم بن عمر | Electrical Engineer</title>
+
+  <script>
+    (function(){
+      try {
+        var saved = localStorage.getItem('lang');
+        if(!saved) {
+          document.documentElement.setAttribute('data-lang','ar');
+          localStorage.setItem('lang','ar');
+        } else {
+          document.documentElement.setAttribute('data-lang', saved);
+        }
+      } catch(e) { }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="assets/style.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Loading overlay -->
+  <!-- Loader -->
   <div id="site-loader" class="site-loader" aria-hidden="true">
-    <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
   </div>
 
-  <div class="container" id="site">
+  <div class="container card" id="site">
+
+    <!-- Header -->
     <header class="header">
       <div class="brand">
         <div class="logo">AO</div>
         <div class="title">
           <h1 class="ar">المهندس آدم بن عمر</h1>
-          <h1 class="en">Adam Omar</h1>
-          <p class="ar">مهندس كهرباء محترف • مهندس شاشات LED • مصمم إعلانات</p>
-          <p class="en">Electrical Engineer • LED Specialist • Ad Designer</p>
+          <h1 class="en">Eng. Adam Omar</h1>
+          <p class="ar">خدمات كهربائية – شاشات LED – شبكات MikroTik</p>
+          <p class="en">Electrical Services – LED Screens – MikroTik Networks</p>
         </div>
       </div>
 
       <button class="menu-toggle" id="menuToggle">☰</button>
 
       <nav class="nav" id="mainNav">
-        <a class="btn" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+        <a class="btn btn-primary" href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
         <a class="btn" href="#services"><span class="ar">الخدمات</span><span class="en">Services</span></a>
         <a class="btn" href="projects.html"><span class="ar">الأعمال</span><span class="en">Projects</span></a>
         <a class="btn" href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
@@ -41,233 +61,117 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section card">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h2 class="ar">خدمات احترافية في مجال الهندسة الكهربائية</h2>
-          <h2 class="en">Professional Electrical Engineering Services</h2>
-          
-          <p class="ar">تخصصي يشمل تنفيذ الأعمال الكهربائية للمباني والشركات والمنازل، وصيانة الشاشات العملاقة LED، وتصميم محتوى إعلاني احترافي.</p>
-          <p class="en">My expertise includes electrical installations for buildings, businesses & homes, LED display maintenance, and professional advertising content design.</p>
-          
-          <div class="hero-buttons">
-            <a href="projects.html" class="btn btn-primary"><span class="ar">عرض الأعمال</span><span class="en">View Projects</span></a>
-            <a href="contact.html" class="btn btn-secondary"><span class="ar">تواصل معي</span><span class="en">Contact Me</span></a>
-          </div>
-        </div>
-        
-        <div class="hero-image">
-          <img src="assets/images/p1.jpg" alt="Adam Omar" class="profile-img">
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
+    <!-- About Section (UPDATED) -->
     <section class="about-section" id="about">
       <div class="about-avatar">
-        <img src="assets/images/p2.jpg" alt="صورة المهن"/>
+        <img src="assets/images/p2.jpg" alt="صورة المهندس" />
       </div>
+
       <div class="about-text">
         <h3 class="ar">نبذة عني</h3>
         <h3 class="en">About Me</h3>
-        <p class="ar">أنا المهندس آدم بن عمر، أقدم خدمات هندسية متكاملة في الكهرباء وتركيب وصيانة شاشات LED، مع خبرة في تصميم المحتوى الإعلاني للشاشات الكبيرة. أعمل بدقة ومهنية لضمان أفضل تجربة للعملاء.</p>
-        <p class="en">I am Adam Omar — an electrical engineer specializing in installations, LED display maintenance, and advertising content design for large screens. I deliver reliable, high-quality solutions tailored to each client's needs.</p>
+
+        <p class="ar">
+          أنا المهندس آدم بن عمر، مهندس كهرباء متخصص في تصميم وتنفيذ الأنظمة الكهربائية للمباني والمنشآت،
+          مع خبرة في تركيب وصيانة شاشات العرض العملاقة بتقنية LED، إضافة إلى برمجة وإدارة الشبكات باستخدام
+          أنظمة MikroTik. أعمل على تنفيذ الأعمال الكهربائية للمنازل والشركات، وتركيب الشاشات الدعائية وصيانتها،
+          وتصميم وبرمجة المحتوى الإعلاني لشاشات الـ LED لضمان أداء ثابت ومظهر احترافي يلبي احتياجات العملاء.
+        </p>
+
+        <p class="en">
+          I am Adam Omar, an electrical engineer specializing in designing and implementing electrical systems for
+          buildings and facilities. I have experience in installing and maintaining large LED display screens, as well
+          as programming and managing networks using MikroTik systems. I provide electrical installation services for
+          homes and businesses, install and service advertising LED screens, and design and program advertising
+          content to ensure reliable performance and a professional presentation tailored to clients' needs.
+        </p>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-      <h2 class="section-title ar">الخدمات الرئيسية</h2>
-      <h2 class="section-title en">Main Services</h2>
-      
-      <div class="services-grid">
-        <div class="service-card card">
-          <div class="service-icon">🔌</div>
-          <h3 class="ar">التركيبات الكهربائية</h3>
-          <h3 class="en">Electrical Installations</h3>
-          <p class="ar">تنفيذ التركيبات والتغذية الكهربائية للمنازل والشركات بأعلى معايير الجودة.</p>
-          <p class="en">Professional installations and power distribution for homes and businesses.</p>
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2 class="ar">الخدمات</h2>
+      <h2 class="en">Services</h2>
+
+      <div class="service-grid">
+        <div class="service-box">
+          <h3 class="ar">الأعمال الكهربائية</h3>
+          <h3 class="en">Electrical Works</h3>
+          <p class="ar">تنفيذ تمديدات كهربائية للمنازل والشركات.</p>
+          <p class="en">Complete electrical installation for homes & companies.</p>
         </div>
 
-        <div class="service-card card">
-          <div class="service-icon">💡</div>
-          <h3 class="ar">شاشات LED العملاقة</h3>
-          <h3 class="en">LED Display Screens</h3>
-          <p class="ar">تركيب وصيانة الشاشات العملاقة وبرمجة وإدارة المحتوى الإعلاني.</p>
-          <p class="en">Installation, maintenance and content management for LED screens.</p>
+        <div class="service-box">
+          <h3 class="ar">شاشات LED</h3>
+          <h3 class="en">LED Screens</h3>
+          <p class="ar">تركيب وصيانة شاشات العرض العملاقة.</p>
+          <p class="en">Installation & maintenance of large LED displays.</p>
         </div>
 
-        <div class="service-card card">
-          <div class="service-icon">🎬</div>
-          <h3 class="ar">تصميم المحتوى الإعلاني</h3>
-          <h3 class="en">Advertising Content Design</h3>
-          <p class="ar">تصميم فيديوهات وصور إعلانية احترافية تناسب الشاشات الكبيرة.</p>
-          <p class="en">Professional ad videos and graphics optimized for large displays.</p>
+        <div class="service-box">
+          <h3 class="ar">برمجة الشبكات</h3>
+          <h3 class="en">Network Setup</h3>
+          <p class="ar">إعداد شبكات MikroTik وإدارة البنية الشبكية.</p>
+          <p class="en">MikroTik configuration & network management.</p>
         </div>
       </div>
     </section>
 
-   <!-- Portfolio Section -->
-<section class="portfolio-section" id="portfolio">
-  <h2 class="ar">أعمالي</h2>
-  <h2 class="en">My Projects</h2>
+    <!-- Footer -->
+    <footer class="footer card">
+      <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
+      <div class="en">© 2025 Adam Omar — All Rights Reserved.</div>
+    </footer>
 
-  <div class="portfolio-gallery">
-    <img src="assets/images/p3.jpg" alt="">
-    <img src="assets/images/p4.jpg" alt="">
-    <img src="assets/images/p5.jpg" alt="">
-    <img src="assets/images/p6.jpg" alt="">
-    <img src="assets/images/p7.jpg" alt="">
-    <img src="assets/images/p8.jpg" alt="">
-    <img src="assets/images/p9.jpg" alt="">
-    <img src="assets/images/p10.jpg" alt="">
-    <img src="assets/images/p11.jpg" alt="">
-    <img src="assets/images/p12.jpg" alt="">
-    <img src="assets/images/p13.jpg" alt="">
-    <img src="assets/images/p14.jpg" alt="">
-    <img src="assets/images/p15.jpg" alt="">
-    <img src="assets/images/p16.jpg" alt="">
-  </div>
-</section>
-
-<style>
-.portfolio-section {
-  padding: 40px;
-  text-align: center;
-}
-
-.portfolio-section h2 {
-  margin-bottom: 20px;
-}
-
-.portfolio-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 10px;
-}
-
-.portfolio-gallery img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.portfolio-gallery img:hover {
-  transform: scale(1.04);
-}
-</style>
-
-<!-- Experience / Clients -->
-<section class="experience-section" id="experience">
-  <h2 class="ar">الخبرات والعملاء</h2>
-  <h2 class="en">Experience & Clients</h2>
-  <p class="ar">بعض الشركات والعملاء الذين تعاملت معهم وشهادات مختصرة.</p>
-  <p class="en">Selected clients and experience highlights.</p>
-
-  <div class="clients-grid">
-    <img class="client-logo" src="assets/projec5.png" alt="Client / Project 5">
-    <img class="client-logo" src="assets/images/p1.jpg" alt="Client example">
-    <img class="client-logo" src="assets/images/p2.jpg" alt="Client example 2">
-  </div>
-</section>
-
-<!-- Why Choose Me Section -->
-<section class="why-section card">
-  <h2 class="ar">لماذا تختارني؟</h2>
-  <h2 class="en">Why Choose Me?</h2>
-  
-  <div class="why-content">
-    <div class="why-item">
-      <span class="why-icon">⭐</span>
-      <h4 class="ar">خبرة عملية طويلة</h4>
-      <h4 class="en">Extensive Experience</h4>
-      <p class="ar">سنوات من الخبرة العملية في المشاريع الكهربائية المختلفة</p>
-      <p class="en">Years of hands-on experience in various electrical projects</p>
-    </div>
-
-    <div class="why-item">
-      <span class="why-icon">✅</span>
-      <h4 class="ar">جودة عالية</h4>
-      <h4 class="en">High Quality</h4>
-      <p class="ar">التركيز على تقديم أفضل جودة في كل مشروع</p>
-      <p class="en">Commitment to delivering the highest quality in every project</p>
-    </div>
-
-    <div class="why-item">
-      <span class="why-icon">⚡</span>
-      <h4 class="ar">سرعة الاستجابة</h4>
-      <h4 class="en">Fast Response</h4>
-      <p class="ar">استجابة سريعة وفعّالة لمتطلبات العملاء</p>
-      <p class="en">Quick and effective response to client needs</p>
-    </div>
-  </div>
-</section>
-
-<!-- Quick Contact Aside -->
-<aside class="quick-contact card">
-  <h3 class="ar">تواصل سريع</h3>
-  <h3 class="en">Quick Contact</h3>
-  <div class="contact-info">
-    <p><strong>📧</strong> <a href="mailto:aadm28285@gmail.com">aadm28285@gmail.com</a></p>
-    <p><strong>📱</strong> <a href="tel:+967771199341">771199341</a></p>
-    <p><strong>📱</strong> <a href="tel:+967730044892">730044892</a></p>
   </div>
 
-  <div class="quick-actions">
-    <a href="contact.html" class="btn btn-full"><span class="ar">تفاصيل التواصل</span><span class="en">Contact Details</span></a>
-    <a href="https://wa.me/967771199341" target="_blank" class="btn btn-full whatsapp"><span class="ar">واتساب</span><span class="en">WhatsApp</span></a>
-    <a href="projects.html" class="btn btn-full"><span class="ar">عرض الأعمال</span><span class="en">View Projects</span></a>
-  </div>
-</aside>
+  <!-- Scripts -->
+  <script>
+    const root = document.documentElement;
 
-<footer class="footer card">
-  <div class="ar">© 2025 المهندس آدم بن عمر — جميع الحقوق محفوظة.</div>
-  <div class="en">© 2025 Adam Omar — All rights reserved.</div>
-</footer>
+    document.getElementById('lang-ar').addEventListener('click', () => {
+      root.setAttribute('data-lang', 'ar');
+      document.getElementById('lang-ar').classList.add('active');
+      document.getElementById('lang-en').classList.remove('active');
+      localStorage.setItem('lang', 'ar');
+    });
 
-</div>
+    document.getElementById('lang-en').addEventListener('click', () => {
+      root.setAttribute('data-lang', 'en');
+      document.getElementById('lang-en').classList.add('active');
+      document.getElementById('lang-ar').classList.remove('active');
+      localStorage.setItem('lang', 'en');
+    });
 
-<script>
-  const root = document.documentElement;
-
-  // language buttons
-  document.getElementById('lang-ar').addEventListener('click', () => {
-    root.setAttribute('data-lang','ar');
-    document.getElementById('lang-ar').classList.add('active');
-    document.getElementById('lang-en').classList.remove('active');
-    localStorage.setItem('lang', 'ar');
-  });
-
-  document.getElementById('lang-en').addEventListener('click', () => {
-    root.setAttribute('data-lang','en');
-    document.getElementById('lang-en').classList.add('active');
-    document.getElementById('lang-ar').classList.remove('active');
-    localStorage.setItem('lang', 'en');
-  });
-
-  // load saved lang
-  const savedLang = localStorage.getItem('lang');
-  if (savedLang) {
+    const savedLang = localStorage.getItem('lang') || 'ar';
     root.setAttribute('data-lang', savedLang);
-    document.getElementById('lang-ar').classList.toggle('active', savedLang === 'ar');
-    document.getElementById('lang-en').classList.toggle('active', savedLang === 'en');
-  }
 
-  // menu toggle
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('mainNav').classList.toggle('open');
-  });
+    if (savedLang === 'en') {
+      document.getElementById('lang-en').classList.add('active');
+      document.getElementById('lang-ar').classList.remove('active');
+    }
 
-  // loader
-  window.addEventListener('load', () => {
-    document.getElementById('site-loader').style.display = 'none';
-  });
-</script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('site-loader');
+      if (loader) {
+        setTimeout(() => {
+          loader.style.opacity = '0';
+          loader.style.transition = 'opacity 300ms ease';
+          setTimeout(() => loader.remove(), 350);
+        }, 500);
+      }
+    });
+
+    (function() {
+      const menuToggle = document.getElementById('menuToggle');
+      const mainNav = document.getElementById('mainNav');
+      if (!menuToggle || !mainNav) return;
+
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('show');
+      });
+    })();
+  </script>
 
 </body>
 </html>
